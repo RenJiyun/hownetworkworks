@@ -25,8 +25,6 @@ public class ServerSocketChannelDemo {
                             byteBuffer.flip();
                             while (byteBuffer.hasRemaining()) {
                                 System.out.print((char) byteBuffer.get());
-                                socketChannel.write(byteBuffer);
-
                             }
 
                             byteBuffer.clear();
