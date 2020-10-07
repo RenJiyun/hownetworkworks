@@ -25,12 +25,14 @@ public class ServerSocketChannelDemo {
                             byteBuffer.flip();
                             while (byteBuffer.hasRemaining()) {
                                 System.out.print((char) byteBuffer.get());
+//                                byteBuffer.rewind();
+//                                socketChannel.write(byteBuffer);
+
                             }
 
                             byteBuffer.clear();
                             bytesRead = socketChannel.read(byteBuffer);
                         }
-
                         socketChannel.close();
                     } catch (IOException e) {
 
